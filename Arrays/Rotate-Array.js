@@ -20,3 +20,12 @@ const rotateArray = ( nums , k ) => {
 }
 
 console.log(rotateArray([1, 2, 3, 4, 5, 6, 7], 3));
+
+function rotateLeft (arr, k) {
+    const rotatedPart = arr.slice(k); // Get the rotated part of the array
+    const remainingPart = arr.slice(0, k); // Get the remaining part of the array
+    return rotatedPart.concat(remainingPart); // Concatenate the rotated part and the remaining part
+}
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+console.log(rotateLeft(arr, 2));
